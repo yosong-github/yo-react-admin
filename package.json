@@ -22,8 +22,16 @@
     }
   },
   "dependencies": {
+    "@ant-design/cssinjs": "^1.21.1",
+    "@unocss/reset": "^0.63.1",
+    "@vueuse/core": "^11.1.0",
+    "antd": "^5.21.1",
+    "i18next": "^23.15.1",
+    "i18next-browser-languagedetector": "^8.0.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-i18next": "^15.0.2",
+    "zustand": "5.0.0-rc.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
@@ -31,6 +39,7 @@
     "@eslint/js": "^9.9.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "@unocss/transformer-attributify-jsx": "^0.63.1",
     "@vitejs/plugin-react": "^4.3.1",
     "commitizen": "^4.3.1",
     "cz-git": "^1.10.0",
@@ -41,8 +50,9 @@
     "globals": "^15.9.0",
     "husky": "^9.1.6",
     "prettier": "3.3.3",
-    "typescript": "^5.5.3",
+    "typescript": "5.5.3",
     "typescript-eslint": "^8.0.1",
+    "unocss": "^0.63.1",
     "vite": "^5.4.1"
   }
 }

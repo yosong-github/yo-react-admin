@@ -2,43 +2,29 @@
  * @Author: yosong 2404559603@qq.com
  * @Date: 2024-09-29 11:25:56
  * @LastEditors: yosong 2404559603@qq.com
- * @LastEditTime: 2024-09-29 12:34:34
+ * @LastEditTime: 2024-09-29 16:48:16
  * @FilePath: \src\App.tsx
  */
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import logo from '@/assets/react.svg'
-import '@/styles/a.css'
-import text from '@/utils/text'
+
+import { App as AntdApp } from 'antd'
+import AntdConfig from './theme/antd'
+// import { useTranslation } from 'react-i18next'
+// import useLocale from './locales/useLocale'
+// import { useConfigActions, useConfig } from '@/store/configStore'
+// import { ThemeMode } from './theme/types/enum'
 
 function App() {
-  const [count, setCount] = useState(0)
-  console.log(logo)
-  text()
-  console.log(import.meta.env.VITE_APP_ENV, 'env')
+  // const { t } = useTranslation()
+  // const { setLocale, locale } = useLocale()
+  // const { setConfig } = useConfigActions()
+  // const { themeMode } = useConfig()
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount(count => count + 1)}>count is {count}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-    </>
+    <AntdConfig>
+      <AntdApp>
+        <h1>嘿嘿</h1>
+      </AntdApp>
+    </AntdConfig>
   )
 }
 
