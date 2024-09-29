@@ -2,7 +2,7 @@
  * @Author: yosong 2404559603@qq.com
  * @Date: 2024-09-29 13:09:40
  * @LastEditors: yosong 2404559603@qq.com
- * @LastEditTime: 2024-09-29 16:14:36
+ * @LastEditTime: 2024-09-29 17:15:20
  * @FilePath: \uno.config.ts
  */
 
@@ -27,7 +27,7 @@ export default defineConfig({
   // 全局主题变量
   theme: {
     colors: {
-      mC: 'var(--main-color)'
+      mC: '#117376'
     }
   },
   // 预设
