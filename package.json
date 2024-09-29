@@ -8,8 +8,17 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "commit": "git-cz",
     "commitlint": "commitlint --config commitlint.config.js -e -V",
     "prepare": "husky"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    },
+    "cz-customizable": {
+      "config": "cz.config.js"
+    }
   },
   "dependencies": {
     "react": "^18.3.1",
