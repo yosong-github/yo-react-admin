@@ -2,16 +2,22 @@
  * @Author: yosong 2404559603@qq.com
  * @Date: 2024-09-29 11:25:56
  * @LastEditors: yosong 2404559603@qq.com
- * @LastEditTime: 2024-09-29 12:16:00
+ * @LastEditTime: 2024-09-29 12:34:34
  * @FilePath: \src\App.tsx
  */
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import logo from '@/assets/react.svg'
+import '@/styles/a.css'
+import text from '@/utils/text'
 
 function App() {
   const [count, setCount] = useState(0)
+  console.log(logo)
+  text()
+  console.log(import.meta.env.VITE_APP_ENV, 'env')
 
   return (
     <>
