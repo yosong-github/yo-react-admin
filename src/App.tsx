@@ -2,7 +2,7 @@
  * @Author: yosong 2404559603@qq.com
  * @Date: 2024-09-29 11:25:56
  * @LastEditors: yosong 2404559603@qq.com
- * @LastEditTime: 2024-09-29 17:14:01
+ * @LastEditTime: 2024-09-30 11:00:15
  * @FilePath: \src\App.tsx
  */
 
@@ -22,7 +22,7 @@ function App() {
 
   return (
     <AntdConfig>
-      <AntdApp>
+      <AntdApp style={{ height: '100vh' }}>
         <Router />
       </AntdApp>
     </AntdConfig>

@@ -2,7 +2,7 @@
  * @Author: yosong 2404559603@qq.com
  * @Date: 2024-09-29 16:29:13
  * @LastEditors: yosong 2404559603@qq.com
- * @LastEditTime: 2024-09-29 16:46:56
+ * @LastEditTime: 2024-09-30 11:58:06
  * @FilePath: \src\store\configStore.ts
  */
 import { ThemeMode } from '@/theme/types/enum'
@@ -10,6 +10,9 @@ import { create } from 'zustand'
 
 type themeType = {
   themeMode: ThemeMode
+  colorPrimary: string
+  colorSideBar: string
+  colorHeader: string
 }
 type ConfigStore = {
   config: themeType
@@ -20,7 +23,10 @@ type ConfigStore = {
 }
 const useConfigStore = create<ConfigStore>(set => ({
   config: {
-    themeMode: ThemeMode.Light
+    themeMode: ThemeMode.Light,
+    colorPrimary: '#117375',
+    colorSideBar: '#fff',
+    colorHeader: '#fff'
   },
   actions: {
     setConfig: config => {

@@ -2,7 +2,7 @@
  * @Author: yosong 2404559603@qq.com
  * @Date: 2024-09-29 14:13:28
  * @LastEditors: yosong 2404559603@qq.com
- * @LastEditTime: 2024-09-29 16:42:44
+ * @LastEditTime: 2024-09-30 10:14:33
  * @FilePath: \src\theme\antd\index.tsx
  */
 import { ConfigProvider, theme } from 'antd'
@@ -17,7 +17,7 @@ type Props = {
 }
 export default function AntdConfig({ children }: Props) {
   const { language } = useLocale()
-  const { themeMode } = useConfig()
+  const { themeMode, colorPrimary } = useConfig()
 
   const algorithm = themeMode === ThemeMode.Light ? theme.defaultAlgorithm : theme.darkAlgorithm
 
@@ -25,7 +25,7 @@ export default function AntdConfig({ children }: Props) {
     <ConfigProvider
       locale={language.antdLocal}
       theme={{
-        token: { ...themeModeToken[themeMode].token },
+        token: { ...themeModeToken[themeMode].token, colorPrimary },
         algorithm
       }}
     >
