@@ -2,7 +2,7 @@
  * @Author: yosong 2404559603@qq.com
  * @Date: 2024-09-29 14:55:49
  * @LastEditors: yosong 2404559603@qq.com
- * @LastEditTime: 2024-09-29 14:58:00
+ * @LastEditTime: 2024-10-08 21:16:07
  * @FilePath: \src\locales\useLocale.ts
  */
 import en_US from 'antd/locale/en_US'
