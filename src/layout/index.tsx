@@ -2,7 +2,7 @@
  * @Author: yosong 2404559603@qq.com
  * @Date: 2024-09-29 17:06:20
  * @LastEditors: yosong 2404559603@qq.com
- * @LastEditTime: 2024-10-08 21:29:54
+ * @LastEditTime: 2024-10-09 23:08:00
  * @FilePath: \src\layout\index.tsx
  */
 import { Outlet } from 'react-router-dom'
@@ -21,7 +21,7 @@ const { Header, Sider, Content } = AntdLayout
 export default function Layout() {
   const [collapsed, setCollapsed] = useState(false)
   const {
-    token: { colorBgContainer }
+    token: { colorBorder, colorBgElevated }
   } = theme.useToken()
   const config = useConfig()
   const { themeMode } = config
@@ -32,11 +32,26 @@ export default function Layout() {
   return (
     <>
       <AntdLayout className="full-height full-width">
-        <Sider style={{ ...siderStyle }} trigger={null} collapsible collapsed={collapsed}>
+        <Sider
+          style={{
+            ...siderStyle,
+            backgroundColor: colorBgElevated,
+            borderRight: `1px solid ${colorBorder}`
+          }}
+          trigger={null}
+          collapsible
+          collapsed={collapsed}
+        >
           我是侧边栏
         </Sider>
         <AntdLayout>
-          <Header style={{ ...headerStyle }}>
+          <Header
+            style={{
+              ...headerStyle,
+              backgroundColor: colorBgElevated,
+              borderBottom: `1px solid ${colorBorder}`
+            }}
+          >
             <Space>
               <Button type="primary" onClick={() => setCollapsed(!collapsed)}>
                 切换菜单展开状态
@@ -62,8 +77,7 @@ export default function Layout() {
               </Button>
             </Space>
           </Header>
-          <Content style={{ ...contentStyle, backgroundColor: colorBgContainer }}>
-            {JSON.stringify(colorBgContainer)}
+          <Content style={{ ...contentStyle, backgroundColor: colorBgElevated }}>
             <Outlet />
           </Content>
         </AntdLayout>
