@@ -22,7 +22,7 @@ type ConfigStore = {
 const useConfigStore = create<ConfigStore>(set => ({
   config: {
     themeMode: ThemeMode.Light,
-    colorPrimary: '#117375'
+    colorPrimary: '#0a8a8c'
   },
   actions: {
     setConfig: config => {
