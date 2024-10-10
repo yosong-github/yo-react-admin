@@ -2,13 +2,13 @@
  * @Author: yosong 2404559603@qq.com
  * @Date: 2024-09-29 14:13:28
  * @LastEditors: yosong 2404559603@qq.com
- * @LastEditTime: 2024-09-30 10:14:33
+ * @LastEditTime: 2024-10-10 22:25:50
  * @FilePath: \src\theme\antd\index.tsx
  */
 import { ConfigProvider, theme } from 'antd'
 import { StyleProvider } from '@ant-design/cssinjs'
 import useLocale from '@/locales/useLocale'
-import { themeModeToken } from './theme'
+import { customComponentConfig, themeModeToken } from './theme'
 import { ThemeMode } from '../types/enum'
 import { useConfig } from '@/store/configStore'
 
@@ -26,6 +26,7 @@ export default function AntdConfig({ children }: Props) {
       locale={language.antdLocal}
       theme={{
         token: { ...themeModeToken[themeMode].token, colorPrimary },
+        components: { ...customComponentConfig },
         algorithm
       }}
     >

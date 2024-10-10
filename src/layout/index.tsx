@@ -2,7 +2,7 @@
  * @Author: yosong 2404559603@qq.com
  * @Date: 2024-09-29 17:06:20
  * @LastEditors: yosong 2404559603@qq.com
- * @LastEditTime: 2024-10-09 23:08:00
+ * @LastEditTime: 2024-10-10 22:01:12
  * @FilePath: \src\layout\index.tsx
  */
 import { Outlet } from 'react-router-dom'
@@ -15,6 +15,7 @@ import useLocale from '@/locales/useLocale'
 import { useTranslation } from 'react-i18next'
 import { LocalEnum } from '@/locales/types/enum'
 import { ThemeMode } from '@/theme/types/enum'
+import Menu from './cpns/Menu'
 
 const { Header, Sider, Content } = AntdLayout
 
@@ -42,7 +43,10 @@ export default function Layout() {
           collapsible
           collapsed={collapsed}
         >
-          我是侧边栏
+          <div className="flex flex-col items-center justify-center h-full">
+            <div className="h-64px">logo</div>
+            <Menu />
+          </div>
         </Sider>
         <AntdLayout>
           <Header
