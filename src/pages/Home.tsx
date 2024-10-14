@@ -6,8 +6,12 @@
  * @FilePath: \src\pages\Home.tsx
  */
 import { Button } from 'antd'
+import { useConfig } from '@/store/configStore'
 
 function Home() {
+  const config = useConfig()
+  console.log(config)
+
   return (
     <>
       <div style={{ height: 10000 }}>

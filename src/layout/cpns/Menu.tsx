@@ -2,11 +2,12 @@
  * @Author: yosong 2404559603@qq.com
  * @Date: 2024-09-30 10:47:58
  * @LastEditors: yosong 2404559603@qq.com
- * @LastEditTime: 2024-10-10 22:14:05
+ * @LastEditTime: 2024-10-14 11:50:46
  * @FilePath: \src\layout\cpns\Menu.tsx
  */
 
 import { Menu as AntdMenu, type MenuProps, theme } from 'antd'
+import SimpleBar from 'simplebar-react'
 
 type MenuItem = Required<MenuProps>['items'][number]
 
@@ -56,7 +57,12 @@ export default function Menu() {
     console.log('click ', e)
   }
   return (
-    <>
+    <SimpleBar
+      forceVisible="y"
+      style={{
+        height: 'calc(100vh - var(--main-header-height))'
+      }}
+    >
       <AntdMenu
         className="h-full !border-none select-none"
         style={{
@@ -68,6 +74,6 @@ export default function Menu() {
         mode="inline"
         items={items}
       />
-    </>
+    </SimpleBar>
   )
 }

@@ -2,3 +2,5 @@
 @import '@unocss/reset/tailwind.css';
 /* 自定义重置样式 */
 @import './base.css';
+/* simplebar */
+@import 'simplebar-react/dist/simplebar.min.css';
